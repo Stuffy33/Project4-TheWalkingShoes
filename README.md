@@ -4,3 +4,6 @@ solution: i relised that i put the env.py file inside the "thewalkingshoes" fold
 
 *REMOVE*
 remove DISABLE_COLLECTSTATIC 1 from Heroku
+
+*Change*
+add links in index.html post-link
