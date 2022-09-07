@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url #Database URL library
-if os.path.isfile('env.py'): #env.py is not found since its in gitignore with this condition it prevents an error.
+if os.path.isfile("env.py"): #env.py is not found since its in gitignore with this condition it prevents an error.
     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'thewalkingshoes.wsgi.application'
 #}
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+   'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
