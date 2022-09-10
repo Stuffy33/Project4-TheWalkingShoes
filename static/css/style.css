@@ -1,20 +1,129 @@
-body {
+h1, h2, h3 {
+    color: #1A313C;
+}
+
+/* Header */
+#nav {
+    text-align: center;
+    height: auto;
+    margin-top: 2.5rem;
+}
+
+.nav-bar {
+    color: #1A313C;
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5em;
+    padding: 5px 70px;
+}
+
+.nav-bar:hover{
+    text-decoration: none;
+    color: #EFB542;
+}
+
+.display-mobile {
+    display: none;
+}
+
+.row{
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+#ul{
+    margin-top: 1rem;
+}
+
+
+/* Login Logout Register */
+.login-out-register {
+    margin: auto;
+    border: 0.5px solid #1A313C;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.login-out-register h2 {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 2.5em;
+    text-transform: lowercase;
+    color: #EFB542;
+}
+
+.login-out-register p {
+    font-size: 1.2em;
+}
+
+
+/* Mobile */
+@media screen and (max-width:520px){
+    /* mobile Header */
+    .logo-tagline {
+        height: 53px;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .dropdown-toggle::after{
+        display: none;
+    }
+
+    .dropdown-menu{
+        margin: 0;
+        width: 100%;
+    }
+
+    /* Navbar */
+    .remove-mobile {
+        display: none;
+    }
+
+    .display-mobile {
+        display: block;
+    }
+
+    .menu-btn-container {
+        text-align: right;
+        padding-right: 7%;
+        padding-top: 5%;
+    }
+
+    .menu-btn-container li{
+        text-align: center;
+        padding: 5px;
+    }
+
+    .menu-btn {
+        padding: 0;
+        border: none;
+        font-family: 'Kanit', sans-serif;
+        background: none;
+        color: #1A313C;
+    }
+
+    .btn-secondary:hover {
+        border: none;
+        background: none;
+        color: #1A313C;
+    }
+
+    .fa-solid, .fa-bars{
+        font-size: 2rem;
+    }
+
+    /* About */
+    .about-image {
+        height: 220px;
+    }
+}
+
+/* body {
     background-color: #F9FAFC;
-}
-
-.brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #4A4A4F;
-}
-
-.red-o {
-    color: #E84610;
-}
-
-.thin {
-    font-weight: 300;
 }
 
 .light-bg {
@@ -139,4 +248,4 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
-}
+} */
