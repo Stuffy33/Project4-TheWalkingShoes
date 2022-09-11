@@ -29,8 +29,8 @@ class Migration(migrations.Migration):
             name='ShoePair',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('shoe_name', models.CharField(max_length=50, unique=True)),
-                ('trader_name', models.CharField(max_length=50, unique=False)),
+                ('shoe_name', models.CharField(max_length=50)),
+                ('trader_name', models.CharField(max_length=50)),
                 ('slug', models.SlugField(unique=True)),
                 ('description', models.TextField()),
                 ('shoe_image', cloudinary.models.CloudinaryField(max_length=255, verbose_name='image')),
