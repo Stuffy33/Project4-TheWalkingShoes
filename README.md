@@ -13,3 +13,7 @@ DEC5E3 pink
 c5869 darkest pink
 40f99b turkoise
 587d71 gray turkoise
+
+bug
+sometimes you can swipe the screen to the side in mobile view.
+this can be fixed later on.

@@ -8,7 +8,7 @@
         <!-- Submission field -->
         {% if user.is_authenticated %}
         <div class="col-sm-6 submit-your-shoes">
-            <div class="card mb-4">
+            <div class="card mb-4 submit-your-shoes-box">
                 <div class="card-body all-trading-posts">
                     <h2>Submit your Shoes:</h2>
                     <hr />
@@ -38,7 +38,7 @@
                         <h2>{{ shoe.shoe_name }}</h2>
                     </a>
                     <hr />
-                    <p>remaining pairs: {{ shoe.remaining_pairs }}/{{ shoe.amount_of_pairs }}</p>
+                    <p>Remaining pairs: {{ shoe.remaining_pairs }}/{{ shoe.amount_of_pairs }}</p>
                     <p>Price: €{{ shoe.price }}</p>
                     <p class="card-text date-text"><i class="far fa-heart"></i> {{ shoe.number_of_likes }}</p>
                 </div>

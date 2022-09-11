@@ -29,29 +29,34 @@
 
         <!-- Navbar Burgermenu/ Mobile view -->
         <div class="dropdown-center display-mobile menu-btn-container">
-            <button class="btn btn-secondary dropdown-toggle menu-btn" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
-                <li>
-                    <a href="{% url 'home' %}" class="nav-bar">Home</a>
-                </li>
-                <li>
-                    <a href="{% url 'shoess' %}" class="nav-bar">Shoes</a>
-                </li>
-                <li>
-                    <a href="{% url 'blog' %}" class="nav-bar">Blog</a>
-                </li>
-                {% if user.is_authenticated %}
-                <li>
-                    <a class="nav-bar" href="{% url 'account_logout' %}">Logout</a>
-                </li>
-                {% else %}
-                <li>
-                    <a class="nav-bar" href="{% url 'account_login' %}">Login / Sign up</a>
-                </li>
-                {% endif %}
-            </ul>
+            <div class="logo_mobile">
+                <a class="list-inline-item logo-mobile" href="{% url 'home' %}" class="nav-bar logo">TheWalking<span class="walking">Shoes</span></a>
+            </div>
+
+                <button class="btn btn-secondary dropdown-toggle menu-btn" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
+                    <li>
+                        <a href="{% url 'home' %}" class="nav-bar">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'shoess' %}" class="nav-bar">Shoes</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'blog' %}" class="nav-bar">Blog</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a class="nav-bar" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a class="nav-bar" href="{% url 'account_login' %}">Login / Sign up</a>
+                    </li>
+                    {% endif %}
+                </ul>
           </div>
 
         <!-- NAVIGATION BAR -->

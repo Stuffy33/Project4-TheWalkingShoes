@@ -128,7 +128,8 @@ h2 {
     letter-spacing: 1px;
 }
 .home-paragraph {
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .about-us{
     color: green;
@@ -172,8 +173,15 @@ h2 {
     color: #FFFFFF;
     border: 1px solid black;
 }
+#id_price{
+    margin-bottom: 10px;
+}
 .submission-form{
     justify-content: center;
+}
+.like-button{
+    background-color: #FFFFFF;
+    border: none;
 }
 
 /*Blog*/
@@ -267,7 +275,7 @@ div.card, .md-4{
     padding-bottom: 0.5rem;
 }
 
-/* signin*/
+/* signup*/
 .signup-btn{
     background: green;
     color: #FFFFFF;
@@ -299,16 +307,23 @@ div.card, .md-4{
 
 
 /* Mobile */
-@media screen and (max-width:520px){
+@media screen and (max-width:1230px){
     /* mobile Header */
-    .logo-tagline {
-        height: 53px;
+    .home-page{
+    width: 90%;
+    margin: auto;
     }
-
-    h1 {
-        font-size: 1.7em;
+    .logo_mobile{
+        font-size: 1.5rem;
+        margin-left: 7%;
+        width:93%;
+        padding-top: .3rem;
     }
-
+    .logo-mobile{
+        font-weight: 600;
+        text-decoration: none;
+        color:black;
+    }
     .dropdown-toggle::after{
         display: none;
     }
@@ -317,7 +332,25 @@ div.card, .md-4{
         margin: 0;
         width: 100%;
     }
+    .home-image{
+        display: none;
+    }
+    .home-paragraph {
+        width: 100%;
+    }
 
+    /* Shoes mobile*/
+    .submit-your-shoes{
+        width:100%;
+    }
+    .shoes-container{
+        margin:0;
+    }
+
+    /* Submit block*/
+    .shoe-submit-box{
+
+    }
     /* Navbar */
     .remove-mobile {
         display: none;
@@ -328,9 +361,12 @@ div.card, .md-4{
     }
 
     .menu-btn-container {
-        text-align: right;
-        padding-right: 7%;
+        text-align: center;
         padding-top: 5%;
+        display: flex;
+        padding-bottom: 3%;
+        border-bottom: 1px solid green;
+        margin-bottom: 1.5rem;
     }
 
     .menu-btn-container li{
@@ -339,11 +375,11 @@ div.card, .md-4{
     }
 
     .menu-btn {
-        padding: 0;
         border: none;
         font-family: 'Roboto', sans-serif;
         background: none;
-        color: #1A313C;
+        color: black;
+        padding-right: 1.5rem;
     }
 
     .btn-secondary:hover {
@@ -356,3 +392,4 @@ div.card, .md-4{
         font-size: 2rem;
     }
 }
+
