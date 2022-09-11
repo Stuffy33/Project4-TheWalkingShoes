@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Shoes -->
+<div class="col-12 shoes-container">
+    <div class="row display-shoes new-submission">
+        <!-- Submission field -->
+        {% if user.is_authenticated %}
+        <div class="col-sm-6">
+            <div class="card mb-4">
+                <div class="card-body all-trading-posts">
+                    <h2>Submit your Shoes:</h2>
+                    <hr />
+                    <p>Got a pair of shoes you want to trade?</p>
+                    <p>Click the button!</p>
+                    <br>
+                    <button onclick="location.href='{% url 'submit_shoes' %}'" type="button" class="submit-shoe-btn">SUBMIT SHOES</button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="row display-shoes">
+        <!-- Approved submissions -->
+        {% for shoe in shoepair_list %}
+        <div class="col-md-6 col-lg-3">
+            <div class="card mb-4">
+                <div class="card-body all-trading-posts">
+                    <div class="image-container">
+                        <img class="card-img-top" src="{{ shoe.shoe_image.url }}" alt="{{ shoe.shoe_name }}">
+                        <div class="image-flash">
+                            <p>Trader: {{ shoe.trader }}</p>
+                        </div>
+                    </div>
+                    <a href="{% url 'shoes_detail' shoe.slug %}" class="shoe-link">
+                        <h2>{{ shoe.shoe_name }}</h2>
+                    </a>
+                    <hr />
+                    <p>remaining pairs: {{ shoe.remaining_pairs }}/{{ shoe.amount_of_pairs }}</p>
+                    <p>Price: €{{ shoe.price }}</p>
+                    <p class="card-text text-muted h6"><i class="far fa-heart"></i> {{ shoe.number_of_likes }}</p>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:4 %}
+    </div>
+    <div class="row display-shoes">
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <br>
+
+    <div class="row next-prev-button">
+        {% if is_paginated %}
+        <div>
+            {% if page_obj.has_previous %}
+            <button onclick="location.href='?page={{ page_obj.previous_page_number }}'" type="button" class="pagination-button">PREV</button>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <button onclick="location.href='?page={{ page_obj.next_page_number }}'" type="button" class="pagination-button">NEXT</button>
+            {% endif %}
+        </div>
+    {% endif %}
+    </div>
+</div>
+
+{%endblock%}

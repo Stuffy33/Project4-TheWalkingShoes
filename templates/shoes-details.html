@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="col-12 single-pair-container">
+    <!-- Name and Image -->
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card mb-4">
+                <div class="card-body single-trading-post">
+                    <h2>{{ shoess.shoe_name }}</h2>
+                    <hr />
+                    <div class="image-container">
+                        <img class="card-img-top" src="{{ shoess.shoe_image.url }}" alt="{{ shoes.shoe_name }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shoe Details -->
+        <div class="col-sm-6">
+            <div class="card mb-4">
+                <div class="card-body single-trading-post">
+                    <p>Artist: {{ shoess.trader }}</p>
+                    <hr />
+                    <p>remaining pairs: {{ shoess.remaining_pairs }}/{{ shoess.amount_of_pairs }}</p>
+                    <p>Price: €{{ shoess.price }}</p>
+                    <p>Shoe size UK {{ shoe.shoe_size }}UK</p>
+                    <p>Style: {{ shoess.category }}</p>
+                    <p>Description: {{ shoess.description | safe }}</p>
+                    <!-- Shoe likes -->
+                    <div class="likes-comments">
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'like_shoe' shoess.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" name="shoepair_id" value="{{ shoess.slug }}"
+                                class="like-button-pressed"><i class="fas fa-heart"></i>
+                                {{ shoess.number_of_likes }}</button>
+                            {% else %}
+                            <button type="submit" name="shoepair_id" value="{{ shoess.slug }}" class="like-button"><i
+                                    class="far fa-heart"></i> {{ shoess.number_of_likes }}</button>
+                            {% endif %}
+                        </form>
+
+                        {% else %}
+                        <p><strong class="text-secondary"><i class="far fa-heart"></i>
+                                {{ shoess.number_of_likes }}</strong></p>
+                        {% endif %}
+
+                        {% if request.user == shoess.trader %}
+                        <hr>
+                        <button onclick="location.href='{% url 'edit_shoe' shoess.slug %}'" type="button"
+                            class="edit-delete-button">EDIT</button>
+                        <button onclick="location.href='{% url 'delete_shoe' shoess.slug %}'" type="button"
+                            class="edit-delete-button">DELETE</button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

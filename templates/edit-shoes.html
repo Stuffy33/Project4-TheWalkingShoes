@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load cloudinary %}
+
+<div class="col-12 shoes-container">
+    <div class="row submission-form">
+    <!-- Submission Field -->
+        {% if user.is_authenticated %}
+        <div class="col-sm-6">
+            <div class="card mb-4">
+                <div class="card-body all-trading-posts">
+                    <h2>Edit your Shoes:</h2>
+                    <hr />
+                    <form method="POST" style="margin-top: 1.3em;" enctype="multipart/form-data">
+                        {{ edit_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="submit-shoe-btn">Submit Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{%endblock%}

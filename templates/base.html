@@ -24,10 +24,10 @@
 
 <body class="d-flex flex-column h-100 main-bg">
 
-    <!-- Navigation -->
+    <!-- Header -->
     <header>
 
-        <!-- NAVBAR COLLAPSE: MOBILE VIEW -->
+        <!-- Navbar Burgermenu/ Mobile view -->
         <div class="dropdown-center display-mobile menu-btn-container">
             <button class="btn btn-secondary dropdown-toggle menu-btn" type="button" id="dropdownCenterBtn" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
@@ -35,6 +35,9 @@
             <ul class="dropdown-menu" aria-labelledby="dropdownCenterBtn">
                 <li>
                     <a href="{% url 'home' %}" class="nav-bar">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'shoess' %}" class="nav-bar">Shoes</a>
                 </li>
                 <li>
                     <a href="{% url 'blog' %}" class="nav-bar">Blog</a>
@@ -57,6 +60,9 @@
                 <ul id="nav" class="list-inline">
                     <li class="list-inline-item">
                         <a href="{% url 'home' %}" class="nav-bar">Home</a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="{% url 'shoess' %}" class="nav-bar">Shoes</a>
                     </li>
                     <li class="list-inline-item">
                         <a href="{% url 'blog' %}" class="nav-bar">Blog</a>
