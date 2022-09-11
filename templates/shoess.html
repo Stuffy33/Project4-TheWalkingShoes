@@ -7,7 +7,7 @@
     <div class="row display-shoes new-submission">
         <!-- Submission field -->
         {% if user.is_authenticated %}
-        <div class="col-sm-6">
+        <div class="col-sm-6 submit-your-shoes">
             <div class="card mb-4">
                 <div class="card-body all-trading-posts">
                     <h2>Submit your Shoes:</h2>
@@ -40,7 +40,7 @@
                     <hr />
                     <p>remaining pairs: {{ shoe.remaining_pairs }}/{{ shoe.amount_of_pairs }}</p>
                     <p>Price: €{{ shoe.price }}</p>
-                    <p class="card-text text-muted h6"><i class="far fa-heart"></i> {{ shoe.number_of_likes }}</p>
+                    <p class="card-text date-text"><i class="far fa-heart"></i> {{ shoe.number_of_likes }}</p>
                 </div>
             </div>
         </div>

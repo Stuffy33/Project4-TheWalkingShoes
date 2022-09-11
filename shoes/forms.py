@@ -19,8 +19,8 @@ class SubmitShoesForm(forms.ModelForm):
             'price',
         )
         labels = {
-            'shoe_name': 'Title',
-            'slug': 'Repeat title. Do not include spaces.',
+            'shoe_name': 'Shoe name',
+            'slug': 'Repeat name. Do not include spaces.',
             'description': 'Description',
             'category': 'Category',
             'shoe_image': 'Select image',

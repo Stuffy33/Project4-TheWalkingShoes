@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('description', models.TextField()),
                 ('shoe_image', cloudinary.models.CloudinaryField(max_length=255, verbose_name='image')),
                 ('shoe_size', models.IntegerField()),
-                ('status', models.IntegerField(choices=[(0, 'Draft'), (1, 'Published')], default=0)),
+                ('status', models.IntegerField(choices=[(0, 'Draft'), (1, 'Published')], default=1)),
                 ('remaining_pairs', models.IntegerField()),
                 ('price', models.IntegerField()),
                 ('created_on', models.DateTimeField(auto_now_add=True)),

@@ -1,21 +1,45 @@
-h1, h2, {
-    color: #40F99B;
-}
 h1 {
     font-family: 'roboto', sans-serif;
     font-weight: 900;
     letter-spacing: 3px;
     font-size: 4vw;
 }
+h3{
+    color:green;
+}
+
+.link{
+    color:green;
+}
+
+.link:hover{
+    color:darkgreen;
+}
+.greenspan{
+    color:green;
+    font-weight: 500;
+}
+.shoe-link{
+    text-decoration: none;
+}
+.fas.fa-heart{
+    color:red;
+}
+
+hr{
+    background-color:green;
+}
 
 p {
     font-family: 'Nunito', sans-serif;
+    margin:0;
 }
 
 h2 {
     font-family: 'Nunito', sans-serif;
     text-transform: uppercase;
     font-size: 2vw;
+    color: green;
 }
 
 
@@ -28,13 +52,14 @@ h2 {
 }
 
 .navbar{
-    border-bottom: 2px solid #40F99B;
-    justify-content: right;
-    background-color: #999999;
+    border-bottom: 2px solid black;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin-bottom: 1.7rem;
 }
 
 .nav-bar {
-    color: #40F99B;
+    color: black;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
@@ -43,7 +68,7 @@ h2 {
 
 .nav-bar:hover{
     text-decoration: none;
-    color: #587D71;
+    color: green;
 }
 
 .display-mobile {
@@ -53,15 +78,6 @@ h2 {
 .row{
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
-}
-
-#ul{
-    margin-top: 1rem;
-}
-
-div.card, .md-4{
-    margin-left: .7rem;
-    margin-right: .7rem;
 }
 
 /* Login Logout Register */
@@ -96,7 +112,6 @@ div.card, .md-4{
     height: auto;
     padding: 1rem;
     padding-right: 5rem;
-    padding-top: 1.9rem;
 }
 
 .home-page h2 {
@@ -105,7 +120,7 @@ div.card, .md-4{
     font-weight: 600;
     margin-top: -13px;
     text-transform: uppercase;
-    color: #DEC5E3;        
+    color: green;        
 }
 
 .home-page p {
@@ -114,15 +129,11 @@ div.card, .md-4{
 }
 .home-paragraph {
     padding: 1rem;
-    padding-top: 2rem;
 }
 .about-us{
-    color: #DEC5E3;
+    color: green;
 }
 
-.shoes-link{
-    color: #40F99B;
-}
 /*logo*/
 .logo{
     text-decoration: none;
@@ -132,8 +143,160 @@ div.card, .md-4{
 }
 .walking{
     text-transform: uppercase;
-    color: #DEC5E3;
+    color: green;
 }
+
+/*Shoes*/
+
+.shoes-container{
+    margin-left: 1.2rem;
+    margin-right: 1,2rem;
+}
+
+.new-submission{
+    justify-content: center;
+    
+}
+
+.submit-your-shoes{
+    width: 500px;
+}
+
+.all-trading-posts{
+    opacity: 1;
+    justify-content: center;
+}
+
+.submit-shoe-btn{
+    background-color: green;
+    color: #FFFFFF;
+    border: 1px solid black;
+}
+.submission-form{
+    justify-content: center;
+}
+
+/*Blog*/
+.card-body{
+    background-color: #FFFFFF;
+    border: 1.5px solid black;
+}
+.trader{
+    padding-top: 1.1rem;
+}
+
+.line-hr{
+    opacity: 1;
+    color: black;
+}
+
+.post-link{
+    font-weight: 500;
+    text-decoration: none;
+    color: green;
+}
+
+.post-link:hover{
+    color:#7c5869;
+}
+
+.post-title{
+    text-transform: uppercase;
+}
+
+.card-text{
+    margin-top: 1rem;
+    color: black;
+}
+.date-text{
+    color:black;
+    opacity: 1;
+}
+
+.page-link{
+    background-color: green;
+    color: white;
+}
+
+#ul{
+    margin-top: 1rem;
+}
+
+div.card, .md-4{
+    margin-left: .7rem;
+    margin-right: .7rem;
+}
+
+/* sign out*/
+.signout-btn{
+    background: green;
+    color: #FFFFFF;
+    border-radius: 0;
+}
+.logout-container{
+    display: flex;
+    justify-content: center;
+}
+.signout-box{
+    padding: 1rem;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.signout-p{
+    padding-bottom: 0.5rem;
+}
+
+/* signin*/
+.signin-btn{
+    background: green;
+    color: #FFFFFF;
+    border-radius: 0;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+}
+.signin-box{
+    padding: 1rem;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.signin-p{
+    padding-bottom: 0.5rem;
+}
+
+/* signin*/
+.signup-btn{
+    background: green;
+    color: #FFFFFF;
+    border-radius: 0;
+}
+.signup-container{
+    display: flex;
+    justify-content: center;
+}
+.signup-box{
+    padding: 1rem;
+    width: 300px;
+    border: 1px solid black;
+}
+
+.signup-p{
+    padding-bottom: 0.5rem;
+}
+
+#id_password2{
+    margin-bottom:0.5rem;
+}
+
+/* post_detail*/
+.btn-like{
+    border: none;
+    background-color: #FFFFFF;
+}
+
 
 /* Mobile */
 @media screen and (max-width:520px){
@@ -186,7 +349,7 @@ div.card, .md-4{
     .btn-secondary:hover {
         border: none;
         background: none;
-        color: #40F99B;
+        color: black;
     }
 
     .fa-solid, .fa-bars{
