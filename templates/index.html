@@ -4,17 +4,25 @@
 
 {% load static %}
 
-<div class="col about-page">
+<div class="col home-page">
     <div class="row">
-        <div class="col-md-8 about-image">
-            <img src="#" alt="Image">
+        <div class="col-md-8 home-image">
+            <img src="{% static 'images/shoecircle.jpg' %}" alt="shoecircle">
         </div>
-        <div class="col-md-4">
-            <h2>About us: </h2>
+        <div class="col-md-4 home-paragraph">
+            <h3 class="about-us">About us: </h3>
             <p>Welcome to TheWalkingShoes</p>
-            <p>Copy1</p>
-            <p>Copy2</p>
-            <p>Copy3</p>
+            <p>TheWalkingShoes is a platform for shoe lovers where they get the chance
+                to trade shoes with other people "traders" as we call them.
+            </p>
+            <p>This concepts originate from the idea of over consumption and we think this
+                could be a more affordable option than buy new shoes. 
+            </p>
+            <p>If you have a pair of shoes thats you just worn once or twice and just collecting dust in the 
+                wardrobe look no further. Post your shoes on our <a class="shoes-link" href="{% url 'shoess' %}">Shoes</a> and 
+                find someone you can trade them with you. You get a new pair and your old pair gets a new home.
+                You will be contacted via discord by a trader for a safe semi anonymous trade.
+            </p>
         </div>
     </div>
 </div>

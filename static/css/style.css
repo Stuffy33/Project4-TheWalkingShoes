@@ -1,16 +1,40 @@
-h1, h2, h3 {
-    color: #1A313C;
+h1, h2, {
+    color: #40F99B;
+}
+h1 {
+    font-family: 'roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 3px;
+    font-size: 4vw;
 }
 
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-size: 2vw;
+}
+
+
 /* Header */
+/*navbar desktop*/
 #nav {
     text-align: center;
     height: auto;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
+}
+
+.navbar{
+    border-bottom: 2px solid #40F99B;
+    justify-content: right;
+    background-color: #999999;
 }
 
 .nav-bar {
-    color: #1A313C;
+    color: #40F99B;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
@@ -19,7 +43,7 @@ h1, h2, h3 {
 
 .nav-bar:hover{
     text-decoration: none;
-    color: #EFB542;
+    color: #587D71;
 }
 
 .display-mobile {
@@ -43,7 +67,7 @@ div.card, .md-4{
 /* Login Logout Register */
 .login-out-register {
     margin: auto;
-    border: 0.5px solid #1A313C;
+    border: 0.5px solid #7C5869;
     padding: 30px;
     border-radius: 10px;
 }
@@ -54,13 +78,62 @@ div.card, .md-4{
     letter-spacing: 3px;
     font-size: 2.5em;
     text-transform: lowercase;
-    color: #EFB542;
+    color: #7c5869;
 }
 
 .login-out-register p {
     font-size: 1.2em;
 }
 
+/* Home */
+.home-page {
+    width: 90%;
+    margin: auto;
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    padding: 1rem;
+    padding-right: 5rem;
+    padding-top: 1.9rem;
+}
+
+.home-page h2 {
+    font-family: 'roboto', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: -13px;
+    text-transform: uppercase;
+    color: #DEC5E3;        
+}
+
+.home-page p {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+.home-paragraph {
+    padding: 1rem;
+    padding-top: 2rem;
+}
+.about-us{
+    color: #DEC5E3;
+}
+
+.shoes-link{
+    color: #40F99B;
+}
+/*logo*/
+.logo{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    padding-right: 100px;
+}
+.walking{
+    text-transform: uppercase;
+    color: #DEC5E3;
+}
 
 /* Mobile */
 @media screen and (max-width:520px){
@@ -113,143 +186,10 @@ div.card, .md-4{
     .btn-secondary:hover {
         border: none;
         background: none;
-        color: #1A313C;
+        color: #40F99B;
     }
 
     .fa-solid, .fa-bars{
         font-size: 2rem;
     }
-
-    /* Home */
-    .about-image {
-        height: 220px;
-    }
 }
-
-/* body {
-    background-color: #F9FAFC;
-}
-
-.light-bg {
-    background-color: #fff;
-}
-
-.dark-bg {
-    background-color: #445261;
-}
-
-.main-bg {
-    background-color: #F9FAFC;
-}
-
-.card {
-    border: none;
-    background-color: transparent;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #23BBBB;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.masthead {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
-    height: 33vh;
-    width: 100%;
-}
-
-.masthead-text {
-    background-color: #445261;
-    color: white;
-    position: relative;
-}
-
-.masthead-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
-
-.post-link {
-    text-decoration: none;
-    color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
-
-.post-title {
-    margin-top: 20%;
-    margin-left: 5%;
-}
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-} */

@@ -7,3 +7,9 @@ remove DISABLE_COLLECTSTATIC 1 from Heroku
 
 *Change*
 add links in index.html post-link
+
+DEC5E3 pink
+886176 darker ping
+c5869 darkest pink
+40f99b turkoise
+587d71 gray turkoise
