@@ -31,7 +31,7 @@
                     <div class="image-container">
                         <img class="card-img-top" src="{{ shoe.shoe_image.url }}" alt="{{ shoe.shoe_name }}">
                         <div class="image-flash">
-                            <p>Trader: {{ shoe.trader }}</p>
+                            <p>Artist: {{ shoe.trader }}</p>
                         </div>
                     </div>
                     <a href="{% url 'shoes_detail' shoe.slug %}" class="shoe-link">
