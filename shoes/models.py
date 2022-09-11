@@ -23,7 +23,7 @@ class Category(models.Model):
 class ShoePair(models.Model):
     #model for trading shoes
     shoe_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
-    trader_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
+    trader = models.CharField(max_length=50, unique=True, null=False, blank=False)
     slug = models.SlugField(max_length=50, unique=True, null=False, blank=False)
     trader = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shoe_pair')
     description = models.TextField()

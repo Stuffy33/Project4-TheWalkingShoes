@@ -8,7 +8,7 @@ class ShoeAdmin(admin.ModelAdmin):
     # Display info in admin site
     list_display = ('shoe_name', 'trader', 'status', 'created_on')
     search_fields = ['shoe_name', 'trader']
-    prepopulated_fields = {'slug': ('trader_name',)}
+    prepopulated_fields = {'slug': ('shoe_name',)}
     list_filter = ('trader', 'created_on')
     actions = ['publish_trade']
 
