@@ -23,13 +23,14 @@ class Category(models.Model):
 class ShoePair(models.Model):
     #model for trading shoes
     shoe_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
+    trader_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
     slug = models.SlugField(max_length=50, unique=True, null=False, blank=False)
     trader = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shoe_pair')
     description = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.PROTECT, blank=False, null=False)
     shoe_image = CloudinaryField('image', null=False, blank=False)
     shoe_size = models.IntegerField(null=False, blank=False)
-    status = models.IntegerField(choices=STATUS, default=1)
+    status = models.IntegerField(choices=STATUS, default=0)
     remaining_pairs = models.IntegerField(null=False, blank=False)
     price = models.IntegerField(null=False, blank=False)
     likes = models.ManyToManyField(User, related_name='shoe_likes', blank=True)

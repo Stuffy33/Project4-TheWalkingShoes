@@ -11,7 +11,7 @@
             <div class="card mb-4 submit-your-shoes-box">
                 <div class="card-body all-trading-posts">
                     <h2>Submit your Shoes:</h2>
-                    <hr />
+                    <hr/>
                     <p>Got a pair of shoes you want to trade?</p>
                     <p>Click the button!</p>
                     <br>
@@ -55,7 +55,7 @@
 
     <div class="row next-prev-button">
         {% if is_paginated %}
-        <div>
+        <div class="next-prev">
             {% if page_obj.has_previous %}
             <button onclick="location.href='?page={{ page_obj.previous_page_number }}'" type="button" class="pagination-button">PREV</button>
             {% endif %}

@@ -11,7 +11,7 @@ class ShoessPage(generic.ListView):
     model = ShoePair
     queryset = ShoePair.objects.filter(status=1).order_by('-created_on')
     template_name = 'shoess.html'
-    paginate_by = 12
+    paginate_by = 8
 
 def submit_shoes(request):
     #View for shoes submission page

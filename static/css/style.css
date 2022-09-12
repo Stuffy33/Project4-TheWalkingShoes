@@ -305,7 +305,14 @@ div.card, .md-4{
     background-color: #FFFFFF;
 }
 
-
+.pagination-button{
+    background-color: green;
+    color: #FFFFFF;
+}
+.next-prev{
+    display: flex;
+    justify-content: center;
+}
 /* Mobile */
 @media screen and (max-width:1230px){
     /* mobile Header */
