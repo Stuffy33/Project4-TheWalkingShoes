@@ -24,8 +24,6 @@ class ShoePair(models.Model):
     #model for trading shoes
     shoe_name = models.CharField(
         max_length=50, unique=True, null=False, blank=False)
-    trader_name = models.CharField(
-        max_length=50, unique=False, null=False, blank=False)
     slug = models.SlugField(
         max_length=50, unique=True, null=False, blank=False)
     trader = models.ForeignKey(
