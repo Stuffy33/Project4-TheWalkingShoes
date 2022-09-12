@@ -2,6 +2,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.template.defaultfilters import slugify
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -46,7 +47,13 @@ class ShoePair(models.Model):
 
     def __str__(self):
         #Display Shoe type
-        return self.shoe_name
+        return f'{self.shoe_name}'
+
+    #auto generate slug fields
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.shoe_name)
+        return super().save(*args, **kwargs)
 
     def number_of_likes(self):
         #Return number of likes per shoes

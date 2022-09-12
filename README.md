@@ -1,8 +1,3 @@
-
-
-*REMOVE*
-remove DISABLE_COLLECTSTATIC 1 from Heroku
-
 # TheWalkingShoes
 TheWalkingShoes is a place for everyone. Its a place where you can trade shoes that dosn't fit, you got bored of them or wanting to contribute to the enviorment and buy used rather then new.
 
@@ -182,6 +177,8 @@ downgrading heroku stack from 22 to 20 then we could use runtime and set a pytho
 3. I got this error when trying to deploy to heroku:
     "TypeError: a bytes-like object is required, not 'str'"
 solution: i relised that i put the env.py file inside the "thewalkingshoes" folder
+
+4. I got a bug called duplicate key value violates unique constraint: or see link ![bug](static/image-bug/Bug.png) it happend because i subitted a value of trader_name with an empty string. trader_name has the unique=True, value=null blank=null could no further information get into the database. Solution was to go into the database thought admin panel remove the faulty submits and remove the trader_name since it didnt have a real purpose to begin with.
 
 ### Validator Testing
 - html files pass through the [W3C validator](https://validator.w3.org/) with no html issues found

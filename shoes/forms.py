@@ -9,7 +9,7 @@ class SubmitShoesForm(forms.ModelForm):
         model = ShoePair
         fields = (
             'shoe_name',
-            'slug',
+            #'slug',
             'description',
             'category',
             'shoe_image',
@@ -20,7 +20,7 @@ class SubmitShoesForm(forms.ModelForm):
         )
         labels = {
             'shoe_name': 'Shoe name',
-            'slug': 'Repeat name. Do not include spaces.',
+            #'slug': 'Repeat name. Do not include spaces.',
             'description': 'Description',
             'category': 'Category',
             'shoe_image': 'Select image',
