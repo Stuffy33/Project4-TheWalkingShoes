@@ -25,6 +25,7 @@ class ShoePair(models.Model):
     shoe_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
     slug = models.SlugField(max_length=50, unique=True, null=False, blank=False)
     trader = models.ForeignKey(User, on_delete=models.CASCADE, related_name='shoe_pair')
+    trader_name = models.CharField(max_length=50, unique=True, null=False, blank=False)
     description = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.PROTECT, blank=False, null=False)
     shoe_image = CloudinaryField('image', null=False, blank=False)
