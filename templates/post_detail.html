@@ -14,7 +14,7 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="/static/images/manyshoes.jpg">
+                <img class="manyshoes-size"src="/static/images/manyshoes.jpg">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}

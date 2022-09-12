@@ -134,6 +134,13 @@ h2 {
 .about-us{
     color: green;
 }
+#social{
+    display:flex;
+    justify-content: center;
+}
+a{
+    color:green;
+}
 
 /*logo*/
 .logo{
@@ -151,7 +158,7 @@ h2 {
 
 .shoes-container{
     margin-left: 1.2rem;
-    margin-right: 1,2rem;
+    margin-right: 1.2rem;
 }
 
 .new-submission{
@@ -182,6 +189,9 @@ h2 {
 .like-button{
     background-color: #FFFFFF;
     border: none;
+}
+.display-shoes{
+    width: 97%
 }
 
 /*Blog*/
@@ -233,6 +243,19 @@ h2 {
 div.card, .md-4{
     margin-left: .7rem;
     margin-right: .7rem;
+}
+.manyshoes-size{
+    width: 100%;
+}
+  /* submit comment*/
+  .btn-signup{
+    background-color: green;
+    color: #FFFFFF;
+    border: 1px solid black;
+    border-radius: 0;
+}
+#div_id_body{
+    margin-bottom: 1rem;
 }
 
 /* sign out*/
@@ -313,6 +336,12 @@ div.card, .md-4{
     display: flex;
     justify-content: center;
 }
+
+.edit-delete-button{
+    background-color: green;
+    color: #FFFFFF;
+}
+
 /* Mobile */
 @media screen and (max-width:1230px){
     /* mobile Header */
@@ -358,6 +387,7 @@ div.card, .md-4{
     .shoe-submit-box{
 
     }
+  
     /* Navbar */
     .remove-mobile {
         display: none;

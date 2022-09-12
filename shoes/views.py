@@ -13,6 +13,7 @@ class ShoessPage(generic.ListView):
     template_name = 'shoess.html'
     paginate_by = 8
 
+
 def submit_shoes(request):
     #View for shoes submission page
     if request.method == 'POST':
@@ -21,7 +22,7 @@ def submit_shoes(request):
             submission_form.instance.trader = request.user
             submission_form.save()
             messages.success(
-                request, "Submission has been successfull. Your trade will show up on our page as soon as it has been reviewed")
+                request, "Submission has been successfull.Your trade will show up on our page as soon as it has been reviewed")
             return redirect('shoess')
         else:
             submission_form = SubmitShoesForm()
@@ -33,6 +34,7 @@ def submit_shoes(request):
             'submission_form': SubmitShoesForm(),
         },
     )
+
 
 def edit_shoes(request, slug):
     #Edit submitted trade
@@ -55,6 +57,7 @@ def edit_shoes(request, slug):
         edit_form = SubmitShoesForm(instance=shoess)
 
     return render(request, 'edit-shoes.html', context)
+
 
 def delete_shoes(request, slug):
     #Delete submitted shoes
@@ -81,6 +84,7 @@ class ShoesDetails(View):
                 'liked': liked,
             }
         )
+
 
 # Class used from "I think therefore I blog" walkthrough.
 class LikeShoePair(View):
