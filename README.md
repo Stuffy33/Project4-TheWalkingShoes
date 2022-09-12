@@ -3,7 +3,7 @@ TheWalkingShoes is a place for everyone. Its a place where you can trade shoes t
 
 See images of different mobile views on. Static/image-readme
 
-The live link for "thewalkingshoes" can be found [HERE](XX)
+The live link for "thewalkingshoes" can be found [HERE](https://thewalkingshoes.herokuapp.com/)
 
 ## Table of Contents
 + [UX](#ux "UX")
@@ -272,6 +272,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 - [w3schools]general help 
 - [stackoverflow] general help
 - [darkpuppy](friend) gave clues and feedback
+- [john](student support) helped me with key-bug as mentioned above nr 4
 
 ### Media
 - all photos were taken from unsplash.com a free to use website
